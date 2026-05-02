@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="default-computer.css" />
     <link rel="stylesheet" href="default-mobile.css" />
+    <link rel="stylesheet" href="pricing-computer.css" />
+    <link rel="stylesheet" href="pricing-mobile.css" />
 
     <title>Get carso for cars</title>
   </head>
@@ -91,7 +93,7 @@
           </span>
           <div class="dropdown-menu">
             <div class="col">
-              <a href="#bmw-section">
+              <a href="#">
                 <img
                   src="images_default/Car_brands_logos/BMW_Logo.png"
                 />
@@ -101,7 +103,7 @@
                   <span class="desc">Precision engineering</span>
                 </div>
               </a>
-              <a href="#toyota-section">
+              <a href="#">
                 <img
                   src="images_default/Car_brands_logos/Toyota_Logo.png"
                 />
@@ -204,7 +206,7 @@
           </span>
           <div class="dropdown-menu">
             <div class="col">
-              <a href="#bmw-section">
+              <a href="#">
                 <img
                   src="images_default/Car_brands_logos/BMW_Logo.png"
                 />
@@ -214,7 +216,7 @@
                   <span class="desc">Sport luxury</span>
                 </div>
               </a>
-              <a href="#toyota-section">
+              <a href="#">
                 <img
                   src="images_default/Car_brands_logos/Toyota_Logo.png"
                 />
@@ -226,7 +228,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="">
+              <a href="#">
                 <img
                   src="images_default/Car_brands_logos/Tesla_Logo.png"
                 />
@@ -296,11 +298,163 @@
         <button class="btn">Get Started</button>
       </div>
     </header>
-    <main>
-      <section class="hero" id="her">
 
+    <main>
+      <section class="pricing hero" id="pricing">
+        <h2>Pricing Plans</h2>
+
+        <div class="pricing-container">
+          <div class="card">
+            <h3>Cash</h3>
+            <p class="price"><span id="cashPrice">1,200,000</span> EGP</p>
+            <p>Pay once and own the car instantly</p>
+            <button class="btn">Buy Now</button>
+          </div>
+
+          <div class="card">
+            <h3>Installment</h3>
+
+            <!-- 🚗 Car Image Placeholder -->
+            <div class="car-image">
+              <img id="carImg" src="" alt="Car Image" />
+
+              <!-- hidden placeholders for teammates -->
+              <img
+                id="img-bmw"
+                src="images_pricing/BMW_M4.jpg"
+                style="display: none"
+              />
+
+              <img
+                id="img-bmw"
+                src="https://cdn.pixabay.com/photo/2018/03/27/21/47/bmw-3267841_640.jpg"
+                style="display: none"
+              />
+              <img
+                id="img-tesla"
+                src="https://cdn.pixabay.com/photo/2021/01/05/15/55/tesla-5891179_640.jpg"
+                style="display: none"
+              />
+              <img
+                id="img-hyundai"
+                src="https://cdn.pixabay.com/photo/2021/01/19/00/25/hyundai-5930217_640.jpg"
+                style="display: none"
+              />
+              <img
+                id="img-lamborghini"
+                src="https://cdn.pixabay.com/photo/2018/10/04/20/36/lamborghini-3724950_640.jpg"
+                style="display: none"
+              />
+              <img
+                id="img-ferrari"
+                src="https://cdn.pixabay.com/photo/2019/04/08/16/14/ferrari-4112230_640.jpg"
+                style="display: none"
+              />
+              <img
+                id="img-bugatti"
+                src="https://cdn.pixabay.com/photo/2016/02/13/11/57/bugatti-1197889_640.jpg"
+                style="display: none"
+              />
+            </div>
+            <div class="car-specs">
+              <h4>Car Specs</h4>
+
+              <p id="spec-speed">Speed:</p>
+              <p id="spec-engine">Engine:</p>
+              <p id="spec-power">Horsepower:</p>
+            </div>
+
+            <!-- 🚗 Car Selector -->
+            <label>Choose Car:</label>
+            <select id="carSelect">
+              <option
+                value="1200000"
+                data-car="bmw"
+                data-speed="255 km/h"
+                data-engine="3.0L TwinPower"
+                data-power="420 HP"
+              >
+                BMW M4 — 1,200,000 EGP
+              </option>
+              <option
+                value="2000000"
+                data-car="tesla"
+                data-speed="250 km/h"
+                data-engine="Dual Motor"
+                data-power="670 HP"
+              >
+                Tesla Model S — 2,000,000 EGP
+              </option>
+              <option
+                value="900000"
+                data-car="hyundai"
+                data-speed="210 km/h"
+                data-engine="2.0L Smartstream"
+                data-power="190 HP"
+              >
+                Hyundai Tucson — 900,000 EGP
+              </option>
+              <option
+                value="3500000"
+                data-car="lamborghini"
+                data-speed="325 km/h"
+                data-engine="V10"
+                data-power="640 HP"
+              >
+                Lamborghini Huracan — 3,500,000 EGP
+              </option>
+              <option
+                value="5000000"
+                data-car="ferrari"
+                data-speed="340 km/h"
+                data-engine="V8 Twin-Turbo"
+                data-power="720 HP"
+              >
+                Ferrari F8 — 5,000,000 EGP
+              </option>
+              <option
+                value="7000000"
+                data-car="bugatti"
+                data-speed="420 km/h"
+                data-engine="W16"
+                data-power="1500 HP"
+              >
+                Bugatti Chiron — 7,000,000 EGP
+              </option>
+            </select>
+
+            <!-- 🏦 Bank Selector -->
+            <label>Choose Bank:</label>
+            <select id="bankSelect">
+              <option value="0.08">CIB (8%)</option>
+              <option value="0.10">NBE (10%)</option>
+              <option value="0.12">QNB (12%)</option>
+            </select>
+
+            <!-- 💰 Down Payment -->
+            <p>Down Payment: <span id="downValue">300000</span> EGP</p>
+            <input
+              type="range"
+              min="100000"
+              max="1500000"
+              step="50000"
+              value="300000"
+              id="downPayment"
+            />
+
+            <!-- 📅 Years -->
+            <p>Years: <span id="yearsValue">5</span></p>
+            <input type="range" min="1" max="7" value="5" id="years" />
+
+            <!-- 💵 Monthly -->
+            <p>💵 Monthly : <span id="monthly">15000</span> EGP</p>
+
+            <button class="btn">Apply Now</button>
+          </div>
+        </div>
       </section>
     </main>
+
     <footer id="footer">
       <div class="social-container">
         <div class="container">
@@ -398,136 +552,7 @@
         </div>
       </div>
     </footer>
- <section id="toyota-section" class="brand-section">
-        <h2 class="section-title">TOYOTA
-        </h2>
-        <div class="cars-container">
-            <div class="car-card">
-                <img src="images/fortuner.jpg" alt="Toyota Fortuner 2025">
-                <div class="card-content">
-                    <h3>Toyota Fortuner 2025</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 2.7L / 4.0L / Diesel</li>
-                        <li>🐎 <strong>Power:</strong> 164 – 235 hp</li>
-                        <li>⚙️ <strong>Transmission:</strong> 6-speed Auto</li>
-                        <li>⛽ <strong>Tank:</strong> ~80L</li>
-                    </ul>
-                    <button class="card-btn">Specs</button>
-                </div>
-            </div>
-
-            <div class="car-card">
-                <img src="images/shas.jpg" alt="Toyota Land Cruiser 70">
-                <div class="card-content">
-                    <h3>Land Cruiser 70 Series</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 4.0L V6 / 4.5L V8</li>
-                        <li>🐎 <strong>Power:</strong> 228 hp</li>
-                        <li>⚙️ <strong>Transmission:</strong> 5-speed Manual</li>
-                        <li>🏜️ <strong>Focus:</strong> Heavy off-road</li>
-                    </ul>
-                    <button class="card-btn">Specs</button>
-                </div>
-            </div>
-
-            <div class="car-card">
-                <img src="images/hilux.jpg" alt="Toyota Hilux 2024">
-                <div class="card-content">
-                    <h3>Toyota Hilux 2024</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 2.4L / 2.8L Diesel</li>
-                        <li>🐎 <strong>Power:</strong> 150 – 204 hp</li>
-                        <li>🛻 <strong>Body:</strong> Pickup</li>
-                        <li>🏔️ <strong>Terrain:</strong> Off-road</li>
-                    </ul>
-                    <button class="card-btn">Specs</button>
-                </div>
-            </div>
-
-            <div class="car-card">
-                <img src="images/tundra.jpg" alt="Toyota Tundra 2020">
-                <div class="card-content">
-                    <h3>Toyota Tundra 2020</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 5.7L V8</li>
-                        <li>🐎 <strong>Power:</strong> 381 hp</li>
-                        <li>⚙️ <strong>Transmission:</strong> 6-speed Auto</li>
-                        <li>⛓️ <strong>Towing:</strong> 9,900 lbs</li>
-                    </ul>
-                    <button class="card-btn">Specs</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="bmw-section" class="brand-section">
-        <h2 class="section-title">BMW</h2>
-        <div class="cars-container">
-            <div class="car-card bmw-highlight">
-                <img src="images/m3.jpg" alt="BMW M3 2024">
-                <div class="card-content">
-                    <h3>BMW M3 2024</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 3.0L Twin-Turbo</li>
-                        <li>🐎 <strong>Power:</strong> 473 – 543 hp</li>
-                        <li>🚀 <strong>0-100:</strong> 3.2 – 4.1s</li>
-                    </ul>
-                    <button class="card-btn">View Specs</button>
-                </div>
-            </div>
-
-            <div class="car-card bmw-highlight">
-                <img src="images/m5.jpg" alt="BMW M5 2025">
-                <div class="card-content">
-                    <h3>BMW M5 2025</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 4.4L V8 Hybrid</li>
-                        <li>🐎 <strong>Power:</strong> 717 hp</li>
-                        <li>🔋 <strong>Electric:</strong> ~40 km range</li>
-                    </ul>
-                    <button class="card-btn">View Specs</button>
-                </div>
-            </div>
-
-            <div class="car-card bmw-highlight">
-                <img src="images/x6.jpg" alt="BMW X6 2017">
-                <div class="card-content">
-                    <h3>BMW X6 2017</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 3.0L I6 / 4.4L V8</li>
-                        <li>🐎 <strong>Power:</strong> 300 – 567 hp</li>
-                        <li>🛻 <strong>Body:</strong> Coupe SUV</li>
-                    </ul>
-                    <button class="card-btn">View Specs</button>
-                </div>
-            </div>
-
-            <div class="car-card bmw-highlight">
-                <img src="images/x7.jpg" alt="BMW X7 2023">
-                <div class="card-content">
-                    <h3>BMW X7 2023</h3>
-                    <ul class="specs">
-                        <li>🏎️ <strong>Engine:</strong> 3.0L I6 / 4.4L V8</li>
-                        <li>🐎 <strong>Power:</strong> 375 – 631 hp</li>
-                        <li>🛋️ <strong>Seating:</strong> 6–7 seats</li>
-                    </ul>
-                    <button class="card-btn">View Specs</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="footer">
-        <p>&copy; 2026 ET Carso - IT Project</p>
-    </footer>
-
-    <script src="light-scroll-BurgerMenu.js" defer></script>
-  
-    <footer id="footer">
-        <p>&copy; 2026 ET Carso - IT Project</p>
-    </footer>
-
-    <script src="light-scroll-BurgerMenu.js" defer></script>
-    
-</body>
+  </body>
+  <script src="light-scroll-BurgerMenu.js"></script>
+  <script src="pricing.js"></script>
 </html>
